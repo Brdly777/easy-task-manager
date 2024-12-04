@@ -1,19 +1,14 @@
 {
-  "name": "PWA CRUD",
-  "short_name": "CRUD",
-  "start_url": "/",
+  "name": "Byke Energy",
+  "short_name": "BykeEnergy",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#28a745",
+  "theme_color": "#3772d8",
   "icons": [
     {
-      "src": "/icons/icon-192x192.png",
+      "src": "icons/icon.png",
       "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/icons/icon-512x512.png",
-      "sizes": "512x512",
       "type": "image/png"
     }
   ]
