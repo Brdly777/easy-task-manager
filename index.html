@@ -1,53 +1,69 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Byke Energy</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="manifest" href="manifest.json">
-  <script src="js/app.js" defer></script>
-</head>
-<body>
-  <header>
-    <nav>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Byke Energy</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4CAF50">
+  </head>
+  <body>
+    <header class="header">
       <button class="menu-btn">☰</button>
-      <table><td><h1>Byke Energy</h1></td>
-      <td><button class="notification-btn">🔔</button></td></table>
+      <h1>Byke Energy</h1>
+      <button class="notifications-btn">🔔</button>
+    </header>
+
+    <!-- Menú Desplegable -->
+    <nav class="menu" id="menu">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Características</a></li>
+        <li><a href="#">Contáctanos</a></li>
+        <li><a href="#">Configuraciones</a></li>
+      </ul>
     </nav>
-  </header>
 
-  <main>
-    <h2>Bienvenido de vuelta!</h2>
-    <p>Resumen de datos más recientes</p>
+    <main class="main">
+      <h2>Bienvenido de vuelta!</h2>
+      <p>Resumen de datos más recientes</p>
+      <section class="cards-container">
+        <div class="card">
+          <h3>Kilómetros del día</h3>
+          <div class="circle-chart">
+            <span>2.1 Km</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Energía Generada</h3>
+          <div class="line-chart">
+            <span>225%</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Porcentaje Actual</h3>
+          <div class="bar-chart">
+            <span>77%</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Descanso</h3>
+          <p>Temporizador</p>
+          <span>01:45</span>
+        </div>
+        <div class="card">
+          <h3>Calorías</h3>
+          <p>Kcal según diastancia recorrida</p>
+          <div class="">
+            <span>1293 Kcal</span>
+          </div>
+        </div>
+      </section>
+      <button class="stats-btn">📊</button>
+    </main>
 
-    <div class="grid-container">
-      <div class="card">
-        <h3>Kilómetros del día</h3>
-        <div class="chart">210 km</div>
-        <p>2.1 km</p>
-      </div>
-      <div class="card">
-        <h3>Energía Generada</h3>
-        <div class="chart">70%</div>
-        <p>Porcentaje actual</p>
-      </div>
-      <div class="card">
-        <h3>Energía</h3>
-        <div class="chart">100%</div>
-        <p>Tiempo restante</p>
-      </div>
-      <div class="card">
-        <h3>Descanso</h3>
-        <div class="chart">01:45</div>
-        <p>Temporizador</p>
-      </div>
-      <div class="card">
-        <h3>Calorías</h3>
-        <div class="chart">150 kcal</div>
-        <p>Kcal según actividad</p>
-      </div>
-    </div>
-  </main>
-</body>
+    <script src="js/script.js"></script>
+    <script src="js/sw.js"></script>
+  </body>
 </html>

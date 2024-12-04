@@ -1,53 +1,144 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f5f5f5;
-    color: #333;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #3772d8;
-    color: white;
-  }
-  
-  h1 {
-    font-size: 1.5rem;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-  }
-  
-  .card {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .notification-btn {
-    justify-content: flex-end;
-    text-align: flex-end;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
 
-  .card h3 {
-    margin: 0;
-  }
-  
-  .chart {
-    font-size: 2rem;
-    margin: 10px 0;
-  }
-  
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Menú desplegable */
+.menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.menu ul li {
+  margin: 10px 0;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 16px;
+  display: block;
+}
+
+.menu ul li a:hover {
+  background-color: #0175c2;
+  color: white;
+}
+
+/* Botón de menú */
+.menu-btn {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+
+.main {
+  padding: 1rem;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.circle-chart {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: conic-gradient(#0175c2 70%, #ddd 30%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+.line-chart {
+  height: 50px;
+  width: 100%;
+  margin: 0.5rem 0;
+  background: linear-gradient(to right, #00ff08 70%, #ddd 30%);
+  border-radius: 8px;
+  position: relative;
+}
+
+.bar-chart{
+  height: 50px;
+  width: 100%;
+  margin: 0.5rem 0;
+  background: linear-gradient(to right, #c4b700 70%, #ddd 30%);
+  border-radius: 8px;
+  position: relative;
+}
+
+.line-chart span, .bar-chart span {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.stats-btn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #0175c2;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
